@@ -18,7 +18,7 @@ app.add_middleware(
 )
 
 # Loading the model
-model = torch.jit.load('backend\EEG_Classification.pt', map_location=torch.device("cpu"))
+model = torch.jit.load('backend\\EEG_Classification.pt', map_location=torch.device("cpu"))
 model.eval()  
 
 @app.get("/")
