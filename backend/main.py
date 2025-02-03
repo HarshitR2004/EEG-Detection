@@ -19,7 +19,7 @@ app.add_middleware(
 
 # Loading the model
 model = torch.jit.load('backend\EEG_Classification.pt', map_location=torch.device("cpu"))
-model.eval()  # Set the model to evaluation mode
+model.eval()  
 
 @app.get("/")
 async def read_root():
