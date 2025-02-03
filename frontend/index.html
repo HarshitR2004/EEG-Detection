@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEG Prediction - Biomedical</title>
+    <link rel="stylesheet" href="style.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1>EEG Prediction</h1>
+        <p>Upload your EEG data file (.npy format).</p>
+        
+        <form id="prediction-form" enctype="multipart/form-data">
+            <div>
+                <label for="eeg-file">Upload EEG Data File</label>
+                <input type="file" id="eeg-file" name="file" accept=".npy" required>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+
+        <div id="result">
+            <h3>Prediction Result:</h3>
+            <p id="prediction"></p>
+            <h3>Top 3 Important Channels:</h3>
+            <ul id="channels-list"></ul>
+        </div>
+    </div>
+
+  
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
