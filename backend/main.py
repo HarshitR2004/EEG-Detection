@@ -64,8 +64,7 @@ async def predict(file: UploadFile = File(...)):
         # Convert top_channels to a JSON-serializable format
         top_channels_serializable = []
         for channel, importance in top_channels:
-            # Convert np.float32 to native Python float
-            importance = float(importance)  # Convert np.float32 to float
+            importance = float(importance) 
             top_channels_serializable.append([channel, importance])
 
         classes = {0: "Normal", 1: "Complex Partial Seizures", 2: "Electrographic Seizures", 3: "Video detected Seizures "}
