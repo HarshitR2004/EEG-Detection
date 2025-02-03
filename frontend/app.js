@@ -63,4 +63,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-"http://localhost:8000/predict/"
