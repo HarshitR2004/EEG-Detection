@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
           channelsList.innerHTML = '';
           resultDiv.style.display = 'none';
 
-          const response = await fetch("http://localhost:8000/predict/", {
+          const response = await fetch("https://your-backend.onrender.com/predict/", {
               method: 'POST',
               body: formData
           });

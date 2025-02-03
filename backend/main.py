@@ -11,10 +11,10 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow any origin
+    allow_origins=["*"],  
     allow_credentials=True,
-    allow_methods=["*"],  # Allow any HTTP method
-    allow_headers=["*"],  # Allow any header
+    allow_methods=["*"],  
+    allow_headers=["*"],  
 )
 
 # Loading the model
@@ -59,7 +59,7 @@ async def predict(file: UploadFile = File(...)):
         # Finding the top 3 most important channels
         channel_names = [f'C{i+1}' for i in range(19)]
         channel_importance_analyzer = ChannelImportanceAnalyzer(model, eeg_tensor, channel_names)
-        top_channels = channel_importance_analyzer.get_top_channels(top_n=3)
+        top_channels = channel_importance_analyzer.get_top_channels(top_n=19)
 
         # Convert top_channels to a JSON-serializable format
         top_channels_serializable = []
