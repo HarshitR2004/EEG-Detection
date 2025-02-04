@@ -6,6 +6,7 @@ import numpy as np
 from backend.eeg_feature_extractor import EEGFeatureExtractor
 from io import BytesIO
 from backend.channel_import_analyzer import ChannelImportanceAnalyzer
+import os
 
 app = FastAPI()
 
