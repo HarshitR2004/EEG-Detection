@@ -53,9 +53,6 @@ async def predict(file: UploadFile = File(...)):
             predicted_class = np.argmax(probs, axis=1).item()  # Get predicted class
             predicted_class = int(predicted_class)
 
-        # Convert probabilities to a list of native Python floats
-        probs = probs.tolist()
-
         # Finding the top 3 most important channels
         channel_names = [f'C{i+1}' for i in range(19)]
         channel_importance_analyzer = ChannelImportanceAnalyzer(model, eeg_tensor, channel_names)
@@ -67,7 +64,7 @@ async def predict(file: UploadFile = File(...)):
             importance = float(importance) 
             top_channels_serializable.append([channel, importance])
 
-        classes = {0: "Normal", 1: "Complex Partial Seizures", 2: "Electrographic Seizures", 3: "Video detected Seizures "}
+        classes = {0: "Normal", 1: "Complex Partial Seizures", 2: "Electrographic Seizures", 3: "Video detected Seizures"}
         
 
         return JSONResponse(content={
