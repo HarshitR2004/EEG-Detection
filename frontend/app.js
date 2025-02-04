@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
           channelsList.innerHTML = '';
           resultDiv.style.display = 'none';
 
-          const response = await fetch("https://your-backend.onrender.com/predict/", {
+          const response = await fetch("https://eeg-detection.onrender.com/predict/", {
               method: 'POST',
               body: formData
           });
