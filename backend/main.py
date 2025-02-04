@@ -6,7 +6,6 @@ import numpy as np
 from eeg_feature_extractor import EEGFeatureExtractor
 from io import BytesIO
 from channel_import_analyzer import ChannelImportanceAnalyzer
-import os
 
 app = FastAPI()
 
@@ -18,9 +17,7 @@ app.add_middleware(
     allow_headers=["*"],  
 )
 
-# Loading the model
-model_path = os.path.join('backend', 'EEG_Classification.pt')
-model = torch.jit.load(model_path, map_location=torch.device("cpu"))
+model = torch.jit.load('EEG_Classification.pt', map_location=torch.device("cpu"))
 model.eval() 
 
 @app.get("/")
