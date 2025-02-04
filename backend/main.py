@@ -3,9 +3,9 @@ from fastapi import FastAPI, HTTPException, File, UploadFile
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
-from backend.eeg_feature_extractor import EEGFeatureExtractor
+from eeg_feature_extractor import EEGFeatureExtractor
 from io import BytesIO
-from backend.channel_import_analyzer import ChannelImportanceAnalyzer
+from channel_import_analyzer import ChannelImportanceAnalyzer
 import os
 
 app = FastAPI()
