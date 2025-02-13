@@ -26,7 +26,7 @@ async def read_root():
 
 def preprocess_eeg(data):
     feature_extractor = EEGFeatureExtractor(signals=data, sampling_rate=256)
-    features = feature_extractor.combine_features(normalize=True)
+    features = feature_extractor.combine_features(normalize=False)
     return features
 
 @app.post("/predict/")
