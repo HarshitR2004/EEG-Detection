@@ -18,7 +18,7 @@ Seizures are sudden and uncontrolled electrical disturbances in the brain that c
 This project aims to develop a real-time seizure detection system using deep learning techniques, allowing automated identification of seizure events from EEG signals. The system is deployed as a web application for ease of use and accessibility.
 
 ## Solution Approach
-Our solution leverages deep learning models to analyze EEG data and detect seizures in real-time. The key steps involved are:
+Our solution leverages deep learning models to analyze EEG data and detect seizures in real time. The key steps involved are:
 1. **Data Preprocessing:** Cleaning and normalizing EEG data for better model performance.
 2. **Feature Engineering:** Extracting meaningful features to improve classification accuracy.
 3. **Deep Learning Model:** Training a CNN-ViT hybrid model to classify seizure vs. non-seizure events.
@@ -46,7 +46,7 @@ The dataset consists of EEG recordings from multiple patients, including seizure
 - Evaluated performance using accuracy, precision, recall, and F1-score.
 
 ## Web Application
-- Developed an interactive **frontend using Streamlit** for real-time monitoring.
+- Developed an interactive **frontend using HTML CSS and JavaScript** for real-time monitoring.
 - Users can upload EEG signals and receive real-time seizure predictions.
 - Integrated **PyTorch hooks** to visualize key EEG channels influencing model decisions.
 
@@ -56,6 +56,21 @@ The dataset consists of EEG recordings from multiple patients, including seizure
 - Optimized inference speed to handle real-time EEG streaming efficiently.
 
 ## Results
-- Achieved **high accuracy** in detecting seizure vs. non-seizure events.
-- Real-time predictions with minimal latency.
-- Clear visualization of critical EEG channels contributing to each decision.
+The model achieved outstanding performance in detecting seizure vs. non-seizure events, as demonstrated by the classification report:
+
+### Classification Report:
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| 0 (Normal) | 0.98 | 0.99 | 0.98 | 696 |
+| 1 (Complex Partial) | 0.99 | 0.97 | 0.98 | 549 |
+| 2 (Electrographic) | 0.99 | 0.99 | 0.99 | 137 |
+| 3 (Video-detected) | 1.00 | 1.00 | 1.00 | 21 |
+
+- **Overall Accuracy:** 98% (1403 samples)
+- **Macro Average:** Precision: 0.99 | Recall: 0.99 | F1-Score: 0.99 | Support: 1403 samples
+- **Weighted Average:** Precision: 0.98 | Recall: 0.98 | F1-Score: 0.98 | Support: 1403 samples
+- **Balanced Accuracy:** 98.76%
+- **AUC-ROC Score:** 0.9983
+
+The model demonstrates high accuracy and generalization capability, with a near-perfect ability to distinguish between seizure and non-seizure events.
+
