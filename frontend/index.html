@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EEG Prediction - Biomedical</title>
-    <link rel="stylesheet" href="style.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>EEG Prediction</h1>
-        <p>Upload your EEG data file (.npy format).</p>
+        <p>Upload your EEG data file (.npy format) and get predictions.</p>
         
         <form id="prediction-form" enctype="multipart/form-data">
             <div>
@@ -18,6 +17,7 @@
                 <input type="file" id="eeg-file" name="file" accept=".npy" required>
             </div>
             <button type="submit">Predict</button>
+            <div id="loader"></div>
         </form>
 
         <div id="result">
@@ -28,10 +28,7 @@
         </div>
     </div>
 
-  
-
     <script src="app.js"></script>
 </body>
 </html>
-
 
