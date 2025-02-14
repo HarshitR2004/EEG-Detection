@@ -1,5 +1,5 @@
 # Real-Time Seizure Detection Web Application
-
+[Link to the Web App](https://eeg-detection-vr8h.onrender.com)
 ## Table of Contents
 - [Problem Statement](#problem-statement)
 - [Solution Approach](#solution-approach)
