@@ -1,0 +1,31 @@
+{
+  "name": "new_frontend",
+  "version": "1.0.0",
+  "description": "A React application for demonstrating notebook renderer capabilities.",
+  "main": "src/index.jsx",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "notebook",
+    "renderer"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "jest": "^26.6.0",
+    "eslint": "^7.14.0",
+    "eslint-plugin-react": "^7.27.0"
+  }
+}
