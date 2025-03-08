@@ -1,13 +1,11 @@
-import React from 'react';
-import './styles/App.css';
+import EEGPrediction from "./EEGPrediction";
 
-const App = () => {
-    return (
-        <div className="app">
-            <h1>Welcome to the New Frontend Application</h1>
-            {/* Additional components can be rendered here */}
-        </div>
-    );
-};
+function App() {
+  return (
+    <div>
+      <EEGPrediction />
+    </div>
+  );
+}
 
 export default App;
